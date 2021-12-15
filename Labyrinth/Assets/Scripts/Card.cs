@@ -8,6 +8,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     Image image;
     GraphicRaycaster gr;
     Canvas canvas;
+    
     public CardHolder cardHolder
     { get; set; }
     public int correctID
@@ -30,7 +31,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     }
     public void OnDrag(PointerEventData data)
     {
-        Debug.Log("Dragging");
+        
         transform.position = Input.mousePosition;
     }
 
@@ -38,7 +39,6 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     {
         if (data.pointerCurrentRaycast.gameObject != null)
         {
-
             Card target = data.pointerCurrentRaycast.gameObject.GetComponent<Card>();
             if (target != null)
             {
@@ -50,6 +50,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             }
             //image.raycastTarget = true;
         }
+        //Debug.Log("Drag End: No Target");
         canvas.overrideSorting = false;
 
     }
