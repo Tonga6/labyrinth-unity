@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8513f0b55897974493a12651bacd6a2, type: 3}
+  m_Name: CardData
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnManagerScriptableObject
+  ids: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  cardText:
+  - I hear screams in the distance. The sort that
+  - I notice that the ground has turned slick with blood as I journey deeper. The
+    screams have stopped.
+  - 'I have found the source of the blood. A mangled body leans against the wall,
+    his chest torn open. Whatever did this is still in here with me. '
+  - Footsteps have followed me ever since I came upon the body. Its killer follows
+    my trail in the darkness.
+  - The footsteps grow louder. I am ready for whatever emerges from the shadows.
+  - The monster was a minotaur made of brass and machinery. I killed it like any
+    monster, if such a thing can be done to machine. Was this pale imitation the
+    work of the Architect?
+  - An intricate door that requires two keys blocks my way. The Architect's workshop
+    must lie beyond this door.
+  - The minotaur had what I needed. Its horns were the key.
+  - Beyond the door is a cavernous library. Endless rows of shelves, each stretching
+    towards the ceiling and out of view. The Architect must be here.
+  - Will he know how to find the river? What if it doesn't flow through this place?
+  - There is a reading candle beside this bookshelf. Its wax is still hot. Someone
+    was here recently.
+  - I have noticed that the floor is covered in markings everywhere I walk. Drawings
+    of some design, each a little different to the rest. Each drawing resembles a
+    pair of wings.
+  - 'I finally found the Architect. He is muttering to himself while he carves another
+    pair of wings onto the ground. '
+  - When I approached he handed me a bowl of libations. He pays me no more attention
+    despite my best effort.
+  - I'm afraid to leave without understanding the purpose of this bowl, but I dare
+    not risk the Architect ire by pestering him further. I will leave the Architect
+    to his work and continue on my way.
+  - I have come to another door. This one opens without resistance.
+  - On the other to a vast bridge that continues into the nothingness. I have no
+    option but to cross it with my libations.
+  - I don't know how long I have been walking this bridge. The workshop is already
+    a distant memory.
+  - There is a noise coming from far below. Another monster? Or something worse.
+  - I find myself slipping in and out of consciousness. There is only the sound of
+    my footsteps and the abyss below.
+  - "That rumbling\u2026 I can't shake the thought... Doesn't it sounds like water?
+    It can't be."
+  - It must be. It must be the river. It has been below me this entire time.
+  - I pour my libations over the edge and watch it fall. An offering of faith. I
+    must have faith.
+  - There is no fear, no doubt. What does it matter whether it is the river beneath
+    me or the endless void? The result is the same.

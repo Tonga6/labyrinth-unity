@@ -28,6 +28,11 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         correctID = int.Parse(fields[0]);
         text.text = fields[1];
     }
+    public void DisplayData()
+    {
+        text.text = cardText;
+
+    }
     public void OnBeginDrag(PointerEventData data)
     {
         Debug.Log("Begin Drag");

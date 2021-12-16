@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     List<Card> cards = new List<Card>();
     List<CardHolder> cardHolders = new List<CardHolder>();
     List<int> range = new List<int>();
-
+    public CardData cardData;
+    //public ScriptableObject cardData;
     public TextAsset csvFile; // Reference of CSV file
     //public InputField rollNoInputField;// Reference of rollno input field
     //public InputField nameInputField; // Reference of name input filed
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //cardData = Resources.Load<CardData>("ScriptObjects/CardData");
         GameObject[] temp = GameObject.FindGameObjectsWithTag("CardHolder");
         for (int i = 0; i < temp.Length; i++)
         {
@@ -37,9 +38,13 @@ public class GameManager : MonoBehaviour
             cards[i].cardHolder = cardHolders[rand];
             cards[i].transform.SetParent(cardHolders[rand].transform);
             cards[i].transform.localPosition = new Vector3(0, 0, 0);
+            cards[i].correctID = cardData.ids[i];
+            cards[i].cardText = cardData.cardText[i];
+            cards[i].DisplayData();
             cardHolders.RemoveAt(rand);
+
         }
-        ReadData();
+        //ReadData();
     }
     // Read data from CSV file
     private void ReadData()

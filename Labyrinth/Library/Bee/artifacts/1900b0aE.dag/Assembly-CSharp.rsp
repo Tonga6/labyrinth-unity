@@ -338,6 +338,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/CardData.cs"
 "Assets/GameManager.cs"
 "Assets/Scripts/Card.cs"
 "Assets/Scripts/CardHolder.cs"

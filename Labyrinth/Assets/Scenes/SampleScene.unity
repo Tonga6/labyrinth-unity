@@ -1084,22 +1084,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 691844733}
     m_Modifications:
-    - target: {fileID: -7998459795343901592, guid: 044b71724ed0bb34dbfdfeababa471c0, type: 3}
-      propertyPath: correctID
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 240245097, guid: 044b71724ed0bb34dbfdfeababa471c0, type: 3}
-      propertyPath: m_Color.b
-      value: 0.24350858
-      objectReference: {fileID: 0}
-    - target: {fileID: 240245097, guid: 044b71724ed0bb34dbfdfeababa471c0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.21026166
-      objectReference: {fileID: 0}
-    - target: {fileID: 240245097, guid: 044b71724ed0bb34dbfdfeababa471c0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4245283
-      objectReference: {fileID: 0}
     - target: {fileID: 700667481797463613, guid: 044b71724ed0bb34dbfdfeababa471c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3203,6 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4396d09b7ef632f4caddce75403d91fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: 64893a636f4484d42a3e782a0e0933f3, type: 2}
   csvFile: {fileID: 4900000, guid: 229bf28254f7bb645b1c56c44d6d2339, type: 3}
 --- !u!4 &904400143
 Transform:
