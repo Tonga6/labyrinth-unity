@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Image image;
@@ -11,8 +12,9 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     
     public CardHolder cardHolder
     { get; set; }
-    public int correctID
-    { get; set; }
+    public int correctID;
+    public string cardText;
+    TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,12 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         image = GetComponent<Image>();
         cardHolder = GetComponentInParent<CardHolder>();
         gr = GetComponent<GraphicRaycaster>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
     }
-
+    public void LoadData(string[] fields) {
+        correctID = int.Parse(fields[0]);
+        text.text = fields[1];
+    }
     public void OnBeginDrag(PointerEventData data)
     {
         Debug.Log("Begin Drag");
@@ -37,6 +43,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData data)
     {
+        Debug.Log("End Drag Target: " + data.pointerCurrentRaycast.gameObject);
         if (data.pointerCurrentRaycast.gameObject != null)
         {
             Card target = data.pointerCurrentRaycast.gameObject.GetComponent<Card>();
@@ -48,9 +55,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
                 transform.localPosition = new Vector3(0, 0, 0);
                 cardHolder = temp;
             }
-            //image.raycastTarget = true;
         }
-        //Debug.Log("Drag End: No Target");
         canvas.overrideSorting = false;
 
     }
