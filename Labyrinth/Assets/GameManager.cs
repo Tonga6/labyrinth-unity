@@ -19,7 +19,22 @@ public class GameManager : MonoBehaviour
 
     private char lineSeperater = '\n'; // It defines line seperate character
     private char fieldSeperator = ','; // It defines field seperate chracter
-    // Start is called before the first frame update
+
+
+    public static GameManager gm;
+
+    private void Awake()
+    {
+        if (gm != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            gm = this;
+        }
+    }
+
     void Start()
     {
         //cardData = Resources.Load<CardData>("ScriptObjects/CardData");
@@ -28,20 +43,20 @@ public class GameManager : MonoBehaviour
         {
             cardHolders.Add(temp[i].GetComponent<CardHolder>());
         }
-
+        List<CardHolder> tempHolders = new List<CardHolder>(cardHolders);
         temp = GameObject.FindGameObjectsWithTag("Card");
 
         for (int i = 0; i < temp.Length; i++)
         {
             cards.Add(temp[i].GetComponent<Card>());
             int rand = Random.Range(0, 24 - i);
-            cards[i].cardHolder = cardHolders[rand];
-            cards[i].transform.SetParent(cardHolders[rand].transform);
+            cards[i].cardHolder = tempHolders[rand];
+            cards[i].transform.SetParent(tempHolders[rand].transform);
             cards[i].transform.localPosition = new Vector3(0, 0, 0);
             cards[i].correctID = cardData.ids[i];
             cards[i].cardText = cardData.cardText[i];
             cards[i].DisplayData();
-            cardHolders.RemoveAt(rand);
+            tempHolders.RemoveAt(rand);
 
         }
         //ReadData();
@@ -58,7 +73,37 @@ public class GameManager : MonoBehaviour
             cards[i - 1].LoadData(fields);
         }
     }
+    public bool CheckGameState()
+    {
+        Debug.Log(cardHolders.Count);
+        bool isWon = false;
+        for (int i = 0; i < 3; i++)
+        {
+            if (!CheckRow(i))
+                return false;
+        }
+        Debug.Log("Sequence In Order");
+        return true;
+    }
+    bool CheckRow(int row)
+    {
+        for (int i = row*8; i < (row+1)*8; i++)
+        {
+            if (cardHolders[i].id != cardHolders[i].GetComponentInChildren<Card>().correctID)
+            {
+                //Debug.Log("Sequence Still Incorrect");
+                return false;
+            }
+
+        }
+        Debug.Log("Row " + row + " in Order");
+        return true;
+    }
 }
 
 
 
+public enum id
+{
+    
+}

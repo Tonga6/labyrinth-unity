@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Image image;
     GraphicRaycaster gr;
@@ -16,6 +16,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public string cardText;
     TextMeshProUGUI text;
     // Start is called before the first frame update
+
     void Start()
     {
         canvas = GetComponent<Canvas>();
@@ -40,9 +41,20 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         //gr.disabled;
         canvas.overrideSorting = true;
     }
+    public void OnPointerEnter(PointerEventData data)
+    {
+        text.alpha = 1;
+        transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+    }
+
+    public void OnPointerExit(PointerEventData data)
+    {
+        text.alpha = 0.75f;
+        transform.localScale += new Vector3(-0.2f, -0.2f, -0.2f);
+
+    }
     public void OnDrag(PointerEventData data)
     {
-        
         transform.position = Input.mousePosition;
     }
 
@@ -55,17 +67,15 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             if (target != null)
             {
                 CardHolder temp = target.cardHolder;
-                target.MoveTo(cardHolder.gameObject);
-                transform.SetParent(temp.transform);
-                transform.localPosition = new Vector3(0, 0, 0);
-                cardHolder = temp;
+                target.MoveTo(cardHolder);
+                MoveTo(temp);
+                GameManager.gm.CheckGameState();
             }
         }
-        canvas.overrideSorting = false;
-
+        transform.localPosition = new Vector3(0, 0, 0);
     }
 
-    public void MoveTo(GameObject target)
+    public void MoveTo(CardHolder target)
     {
         canvas.overrideSorting = true;
 
