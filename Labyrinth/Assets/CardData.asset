@@ -14,47 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManagerScriptableObject
   ids: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
   cardText:
-  - I hear screams in the distance. The sort that
-  - I notice that the ground has turned slick with blood as I journey deeper. The
-    screams have stopped.
-  - 'I have found the source of the blood. A mangled body leans against the wall,
-    his chest torn open. Whatever did this is still in here with me. '
-  - Footsteps have followed me ever since I came upon the body. Its killer follows
-    my trail in the darkness.
-  - The footsteps grow louder. I am ready for whatever emerges from the shadows.
-  - The monster was a minotaur made of brass and machinery. I killed it like any
-    monster, if such a thing can be done to machine. Was this pale imitation the
-    work of the Architect?
-  - An intricate door that requires two keys blocks my way. The Architect's workshop
-    must lie beyond this door.
-  - The minotaur had what I needed. Its horns were the key.
-  - Beyond the door is a cavernous library. Endless rows of shelves, each stretching
-    towards the ceiling and out of view. The Architect must be here.
-  - Will he know how to find the river? What if it doesn't flow through this place?
-  - There is a reading candle beside this bookshelf. Its wax is still hot. Someone
-    was here recently.
-  - I have noticed that the floor is covered in markings everywhere I walk. Drawings
-    of some design, each a little different to the rest. Each drawing resembles a
-    pair of wings.
-  - 'I finally found the Architect. He is muttering to himself while he carves another
-    pair of wings onto the ground. '
-  - When I approached he handed me a bowl of libations. He pays me no more attention
-    despite my best effort.
-  - I'm afraid to leave without understanding the purpose of this bowl, but I dare
-    not risk the Architect ire by pestering him further. I will leave the Architect
-    to his work and continue on my way.
-  - I have come to another door. This one opens without resistance.
-  - On the other to a vast bridge that continues into the nothingness. I have no
-    option but to cross it with my libations.
-  - I don't know how long I have been walking this bridge. The workshop is already
-    a distant memory.
-  - There is a noise coming from far below. Another monster? Or something worse.
-  - I find myself slipping in and out of consciousness. There is only the sound of
-    my footsteps and the abyss below.
-  - "That rumbling\u2026 I can't shake the thought... Doesn't it sounds like water?
-    It can't be."
-  - It must be. It must be the river. It has been below me this entire time.
-  - I pour my libations over the edge and watch it fall. An offering of faith. I
-    must have faith.
-  - There is no fear, no doubt. What does it matter whether it is the river beneath
-    me or the endless void? The result is the same.
+  - I hear screams in the distance. I wonder what brought that poor soul down here.
+  - 'The ground has turned slick with blood and the screams are only a feeble moan
+    now. '
+  - I have found a mangled body, his chest torn open. Whatever did this is still
+    in here with me. Footsteps follow me now.
+  - If monsters are all that stand between me and the Architect's Workshop I will
+    count myself lucky.
+  - The beast is close now. I am ready for whatever emerges from the shadows.
+  - I have slain the monster. It was a minotaur made of brass and steel. A replacement
+    for the original?
+  - A large door needing two keys blocks my way. The Architect's workshop must lie
+    beyond.
+  - The minotaur's brass horns were the key. How could anyone beyond this door ever
+    leave with the minotaur locked outside?
+  - The door leads to a cold and dark forge. Someone mutters to themselves in the
+    dark. The Architect?
+  - Markings are etched everywhere. They all resemble a set of wings. Each design
+    is a little different from the others.
+  - The forge leads to a library, bigger than any I have seen. The inscriptions continue
+    here.
+  - I have found the one muttering. An old, frail man. He scratches into the floor
+    with jagged nails. Is this the Architect?
+  - He handed me an idol of Zeus when I approached, but pays me no more attention.
+    What am I to do with this?
+  - It is clear I cannot coax any advice from him. His gift must lead to the river
+    if I am clever enough.
+  - I leave the Architect to his strange work and proceed through this cold and quiet
+    place. I see the exit up ahead.
+  - 'Before me now is a vast bridge that leads into darkness. I have no choice but
+    to cross. '
+  - I hear a rumbling that comes from far below. Another monster? Or something worse.
+  - My body is failing me. If it is another monster I don't know if I will survive.
+    I am afraid for the first time in my life.
+  - Focusing on the noise below helps to distract me from my growing doubt.
+  - 'It sounds familiar, doesn''t it? I''ve heard it before... Where have I heard
+    it? '
+  - At the crossroads, a lifetime ago... The crossroads beside the river...
+  - Is the river truely beneath me? What if the sound is just a figment of my imagination?
+  - But, the Architect's gift... The idol... An offering of faith... I must have
+    faith.
+  - There is no difference if the river lies below or the endless void. I am free
+    at last.

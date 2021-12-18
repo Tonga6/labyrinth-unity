@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private char lineSeperater = '\n'; // It defines line seperate character
     private char fieldSeperator = ','; // It defines field seperate chracter
 
-
+    public Image[] temps;
     public static GameManager gm;
 
     private void Awake()
@@ -59,20 +59,8 @@ public class GameManager : MonoBehaviour
             tempHolders.RemoveAt(rand);
 
         }
-        //ReadData();
     }
-    // Read data from CSV file
-    private void ReadData()
-    {
-        string[] records = csvFile.text.Split(lineSeperater);
-        Debug.Log(records.Length);
-        Debug.Log(cards.Count);
-        for(int i = 1; i < records.Length; i++)
-        {
-            string[] fields = records[i].Split(fieldSeperator);
-            cards[i - 1].LoadData(fields);
-        }
-    }
+
     public bool CheckGameState()
     {
         Debug.Log(cardHolders.Count);
@@ -94,6 +82,11 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("Sequence Still Incorrect");
                 return false;
             }
+
+        }
+        for (int i = row * 8; i < (row + 1) * 8; i++)
+        {
+            cardHolders[i].GetComponentInChildren<Card>().image.color = Color.yellow;
 
         }
         Debug.Log("Row " + row + " in Order");

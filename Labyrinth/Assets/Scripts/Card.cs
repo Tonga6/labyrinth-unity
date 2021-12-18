@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    Image image;
+    public Image image;
     GraphicRaycaster gr;
     Canvas canvas;
     
@@ -17,13 +17,15 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     TextMeshProUGUI text;
     // Start is called before the first frame update
 
-    void Start()
+    void Awake()
     {
+        cardText = "";
         canvas = GetComponent<Canvas>();
         image = GetComponent<Image>();
         cardHolder = GetComponentInParent<CardHolder>();
         gr = GetComponent<GraphicRaycaster>();
         text = GetComponentInChildren<TextMeshProUGUI>();
+        text.alpha = 0.75f;
     }
     public void LoadData(string[] fields) {
         correctID = int.Parse(fields[0]);
@@ -32,7 +34,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void DisplayData()
     {
         text.text = cardText;
-
     }
     public void OnBeginDrag(PointerEventData data)
     {
@@ -44,13 +45,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void OnPointerEnter(PointerEventData data)
     {
         text.alpha = 1;
-        transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
     }
 
     public void OnPointerExit(PointerEventData data)
     {
         text.alpha = 0.75f;
-        transform.localScale += new Vector3(-0.2f, -0.2f, -0.2f);
+        transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
 
     }
     public void OnDrag(PointerEventData data)
