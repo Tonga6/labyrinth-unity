@@ -33,6 +33,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     }
     public void DisplayData()
     {
+        if (text == null)
+            text = GetComponentInChildren<TextMeshProUGUI>();
         text.text = cardText;
     }
     public void OnBeginDrag(PointerEventData data)
@@ -44,6 +46,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     }
     public void OnPointerEnter(PointerEventData data)
     {
+        Debug.Log("Card ID : " + correctID + " vs. CardHolder ID : " + GetComponentInParent<CardHolder>().id);
         text.alpha = 1;
         transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
     }
@@ -61,7 +64,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnEndDrag(PointerEventData data)
     {
-        Debug.Log("End Drag Target: " + data.pointerCurrentRaycast.gameObject);
+        gr.enabled = false;
+    
         if (data.pointerCurrentRaycast.gameObject != null)
         {
             Card target = data.pointerCurrentRaycast.gameObject.GetComponent<Card>();
@@ -70,10 +74,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
                 CardHolder temp = target.cardHolder;
                 target.MoveTo(cardHolder);
                 MoveTo(temp);
-                GameManager.gm.CheckGameState();
             }
         }
         transform.localPosition = new Vector3(0, 0, 0);
+        GameManager.gm.CheckGameState();
+        Debug.Log(GameManager.gm == null);
+        gr.enabled = true;
+
     }
 
     public void MoveTo(CardHolder target)

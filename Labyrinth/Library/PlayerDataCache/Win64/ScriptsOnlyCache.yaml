@@ -896,7 +896,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 7aa61f1336732c54a7150c1f79a6c0d3
+      Hash: bb7072ef0e9ee694b5cd1d71ef833101
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
