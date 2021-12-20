@@ -492,6 +492,10 @@ PrefabInstance:
       value: CardHolder (13)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -607,6 +611,10 @@ PrefabInstance:
       value: CardHolder (10)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -710,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -929,6 +941,10 @@ PrefabInstance:
       value: CardHolder (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -1037,6 +1053,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -1454,6 +1474,10 @@ PrefabInstance:
       value: CardHolder (18)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -1858,6 +1882,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -2469,6 +2497,10 @@ PrefabInstance:
       value: CardHolder (15)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -2678,6 +2710,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -3133,6 +3169,10 @@ PrefabInstance:
       value: CardHolder (7)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -3344,6 +3384,10 @@ PrefabInstance:
       value: CardHolder (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -3457,6 +3501,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -3873,6 +3921,10 @@ PrefabInstance:
       value: CardHolder (14)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -3983,6 +4035,10 @@ PrefabInstance:
       value: CardHolder (6)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -4091,6 +4147,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -4305,6 +4365,10 @@ PrefabInstance:
       value: CardHolder (8)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -4415,6 +4479,10 @@ PrefabInstance:
       value: CardHolder (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -4523,6 +4591,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -4748,7 +4820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -4965,6 +5037,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -5203,6 +5279,10 @@ PrefabInstance:
       value: CardHolder (22)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -5316,6 +5396,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
@@ -5534,6 +5618,10 @@ PrefabInstance:
       value: CardHolder (21)
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -5643,6 +5731,10 @@ PrefabInstance:
     - target: {fileID: 6258284456989274041, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_Name
       value: CardHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7313738136950210430, guid: 633b3e7c29afe5e48879a66cd7708386, type: 3}
       propertyPath: m_RaycastTarget

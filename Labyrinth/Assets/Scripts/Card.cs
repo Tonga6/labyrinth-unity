@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
+
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
@@ -21,6 +23,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         cardText = "";
         canvas = GetComponent<Canvas>();
+        canvas.sortingLayerID = 0;
         image = GetComponent<Image>();
         cardHolder = GetComponentInParent<CardHolder>();
         gr = GetComponent<GraphicRaycaster>();
@@ -76,7 +79,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
                 MoveTo(temp);
             }
         }
-        transform.localPosition = new Vector3(0, 0, 0);
         GameManager.gm.CheckGameState();
         Debug.Log(GameManager.gm == null);
         gr.enabled = true;
@@ -85,12 +87,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void MoveTo(CardHolder target)
     {
-        canvas.overrideSorting = true;
-
+        canvas.sortingLayerID = 1;
         transform.SetParent(target.transform);
-        transform.localPosition = new Vector3(0, 0, 0);
+        transform.DOMove(target.transform.position, 1);
         cardHolder = target.GetComponent<CardHolder>();
-        canvas.overrideSorting = false;
+
+        canvas.sortingLayerID = 0;
+        //canvas.overrideSorting = false;
 
     }
 }
