@@ -6,7 +6,7 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-
+    public GameObject gameOver;
     List<Card> cards = new List<Card>();
     List<CardHolder> cardHolders = new List<CardHolder>();
     List<int> range = new List<int>();
@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
         else
         {
             gm = this;
+            gameOver.SetActive(false);
             cardHolders = new List<CardHolder>(grid.GetComponentsInChildren<CardHolder>());
-            
-            Debug.Log("cardHolders" + cardHolders.Count);
+
             List<CardHolder> tempHolders = new List<CardHolder>(cardHolders);
             GameObject[] temp = GameObject.FindGameObjectsWithTag("Card");
 
@@ -49,31 +49,23 @@ public class GameManager : MonoBehaviour
                 cards[i].cardText = cardData.cardText[i];
                 cards[i].DisplayData();
                 tempHolders.RemoveAt(rand);
-
             }
         }
     }
 
-    void Start()
-    {
-        //cardData = Resources.Load<CardData>("ScriptObjects/CardData");
-        
-    }
 
-    public bool CheckGameState()
+    public void CheckGameState()
     {
-        foreach (CardHolder ch in cardHolders)
-        {
-            Debug.Log(ch.id);
-        }
+
         bool isWon = false;
         for (int i = 0; i < 3; i++)
         {
             if (!CheckRow(i))
-                return false;
+                return;
         }
         Debug.Log("Sequence In Order");
-        return true;
+        SequenceComplete();
+        return;
     }
     bool CheckRow(int row)
     {
@@ -81,23 +73,18 @@ public class GameManager : MonoBehaviour
         {
             if (cardHolders[i].id != cardHolders[i].GetComponentInChildren<Card>().correctID)
             {
-                Debug.Log("CH id: " + cardHolders[i].id + "Does not align with C id: " + cardHolders[i].GetComponentInChildren<Card>().correctID);
                 return false;
             }
 
         }
         for (int i = row * 8; i < (row + 1) * 8; i++)
         {
-            cardHolders[i].GetComponentInChildren<Card>().image.color = Color.yellow;
+            cardHolders[i].GetComponentInChildren<Card>().LockCard();
         }
-        Debug.Log("Row " + row + " in Order");
         return true;
     }
-}
-
-
-
-public enum id
-{
-    
+    void SequenceComplete()
+    {
+        //gameOver.SetActive(true);
+    }
 }

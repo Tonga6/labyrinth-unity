@@ -9,6 +9,7 @@ using DG.Tweening;
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
+    public bool locked = false;
     GraphicRaycaster gr;
     Canvas canvas;
     
@@ -43,22 +44,18 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void OnBeginDrag(PointerEventData data)
     {
         Debug.Log("Begin Drag");
-        //image.raycastTarget = false;
-        //gr.disabled;
         canvas.overrideSorting = true;
     }
     public void OnPointerEnter(PointerEventData data)
     {
-        Debug.Log("Card ID : " + correctID + " vs. CardHolder ID : " + GetComponentInParent<CardHolder>().id);
         text.alpha = 1;
-        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        transform.DOScale(1.1f,0.25f);
     }
 
     public void OnPointerExit(PointerEventData data)
     {
         text.alpha = 0.75f;
-        transform.localScale += new Vector3(-0.1f, -0.1f, -0.1f);
-
+        transform.DOScale(1, 0.25f);
     }
     public void OnDrag(PointerEventData data)
     {
@@ -67,8 +64,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnEndDrag(PointerEventData data)
     {
-        gr.enabled = false;
-    
         if (data.pointerCurrentRaycast.gameObject != null)
         {
             Card target = data.pointerCurrentRaycast.gameObject.GetComponent<Card>();
@@ -77,23 +72,39 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
                 CardHolder temp = target.cardHolder;
                 target.MoveTo(cardHolder);
                 MoveTo(temp);
+                canvas.overrideSorting = false;
+
+                GameManager.gm.CheckGameState();
             }
         }
-        GameManager.gm.CheckGameState();
-        Debug.Log(GameManager.gm == null);
-        gr.enabled = true;
-
+        
     }
 
     public void MoveTo(CardHolder target)
     {
-        canvas.sortingLayerID = 1;
         transform.SetParent(target.transform);
-        transform.DOMove(target.transform.position, 1);
         cardHolder = target.GetComponent<CardHolder>();
 
-        canvas.sortingLayerID = 0;
-        //canvas.overrideSorting = false;
+        canvas.overrideSorting = true;
+        canvas.sortingOrder = 1;
+        //transform.DOScale(1.5f, 0.25f);
+        transform.DOMove(target.transform.position, 1).OnComplete
+               (
+                  () =>
+                  {
+                      Debug.Log("DOMove complete");
+                      transform.DOScale(1, 0.25f);                      
+                      canvas.sortingOrder = 0;
+                      canvas.overrideSorting = false;
+                  }
+               );
+    }
 
+
+    public void LockCard()
+    {
+        image.DOFade(0.6f, 0.5f);
+        image.raycastTarget = false;
+        this.enabled = false;
     }
 }
