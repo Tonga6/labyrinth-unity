@@ -25,9 +25,15 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
         cardText = "";
         canvas = GetComponent<Canvas>();
         canvas.sortingLayerID = 0;
+
         image = GetComponent<Image>();
+        Color temp = image.color;
+        temp.a = 0.75f;
+        image.color = temp;
+
         cardHolder = GetComponentInParent<CardHolder>();
         gr = GetComponent<GraphicRaycaster>();
+
         text = GetComponentInChildren<TextMeshProUGUI>();
         text.alpha = 0.75f;
     }
@@ -48,12 +54,20 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     }
     public void OnPointerEnter(PointerEventData data)
     {
+        Color temp = image.color;
+        temp.a = 0.1f;
+        image.color = temp;
+
         text.alpha = 1;
         transform.DOScale(1.1f,0.25f);
     }
 
     public void OnPointerExit(PointerEventData data)
     {
+        Color temp = image.color;
+        temp.a = 0.75f;
+        image.color = temp;
+
         text.alpha = 0.75f;
         transform.DOScale(1, 0.25f);
     }
@@ -72,7 +86,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
                 CardHolder temp = target.cardHolder;
                 target.MoveTo(cardHolder);
                 MoveTo(temp);
-                canvas.overrideSorting = false;
 
                 GameManager.gm.CheckGameState();
             }
@@ -100,10 +113,11 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
                );
     }
 
-
     public void LockCard()
     {
-        image.DOFade(0.6f, 0.5f);
+        text.alpha = 1;
+        text.color = Color.white;
+        image.DOFade(0.6f, 1f);
         image.raycastTarget = false;
         this.enabled = false;
     }

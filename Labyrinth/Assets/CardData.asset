@@ -14,44 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManagerScriptableObject
   ids: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
   cardText:
-  - I hear screams in the distance. I wonder what brought that poor soul down here.
-  - 'The ground has turned slick with blood and the screams are only a feeble moan
-    now. '
+  - I hear screams in the distance. Are they real? I wonder if they came here looking
+    for the River too.
+  - The ground has turned slick with blood and the screams have turned to whimpers.
   - I have found a mangled body, his chest torn open. Whatever did this is still
-    in here with me. Footsteps follow me now.
-  - If monsters are all that stand between me and the Architect's Workshop I will
-    count myself lucky.
-  - The beast is close now. I am ready for whatever emerges from the shadows.
+    in here with me.
+  - Footsteps follow me now. If monsters are all that stand between me and the River
+    I will count myself lucky.
+  - Clashing metal echoes the halls. The monster must be close.
   - I have slain the monster. It was a minotaur made of brass and steel. A replacement
     for the original?
-  - A large door needing two keys blocks my way. The Architect's workshop must lie
+  - A large door needing two keys blocks my way. The Architect's Workshop must lie
     beyond.
-  - The minotaur's brass horns were the key. How could anyone beyond this door ever
+  - The minotaur's brass horns were the keys. How could anyone beyond this door ever
     leave with the minotaur locked outside?
-  - The door leads to a cold and dark forge. Someone mutters to themselves in the
-    dark. The Architect?
-  - Engravings cover this place. They all resemble a set of wings, each design a
-    little different from the others.
-  - The forge leads to a library, bigger than any I have seen. The inscriptions continue
-    here.
-  - The muttering has lead me to an old, frail man. He scratches into the floor with
-    jagged nails.     Is this the Architect?
-  - He handed me an idol of Zeus when I approached, but pays me no more attention.
+  - The door leads to a cold and dark forge. I think someone mutters in the dark.
+  - Engravings cover every surface. They resemble sets of wings, each design a little
+    different from the others.
+  - A faint light flickers in the distance. The first sign of light I have seen in
+    a long time.
+  - The light has lead me to an old, frail man. He scratches designs into the floor
+    with jagged nails.
+  - He handed me an idol of Hera when I approached, but pays me no more attention.
     What am I to do with this?
-  - It is clear I cannot coax any advice from him. His gift must lead to the river
-    if I am clever enough.
-  - I leave the Architect to his strange work and proceed through this cold and quiet
-    place. I see the exit up ahead.
-  - 'Before me now is a vast bridge that leads into darkness. I have no choice but
-    to cross. '
-  - I hear a rumbling that comes from far below. Another monster? Or something worse.
-  - My body is failing. If it is another monster I don't know if I will survive.
+  - The irony is not lost on me that the Architect's gift should depict her of all
+    gods.
+  - I leave the Architect to his obsession. I trust the meaning of his gift will
+    come to me.
+  - The workshop leads to a vast bridge that leads into darkness. I have no choice
+    but to cross.
+  - A rumbling that comes from far below. Another monster? Or something worse.
+  - I feel my body starting to fail me now. If it is another monster I don't know
+    if I will survive.
   - Focusing on the noise below helps to distract me from my growing doubt.
   - 'It sounds familiar, doesn''t it? I''ve heard it before... Where have I heard
     it? '
   - At the crossroads, a lifetime ago... The crossroads beside the river...
-  - Is the river truely beneath me? What if the sound is just a figment of my imagination?
+  - Could it be? What if the sound is just a figment of my imagination? Or what if
+    it isn't really the river?
   - But, the Architect's gift... The idol... An offering of faith... I must have
     faith.
-  - There is no difference if the river lies below or the endless void. I am free
-    at last.
+  - I step to the edge... The outcome will be the same whether the river lies below
+    or the endless abyss.
