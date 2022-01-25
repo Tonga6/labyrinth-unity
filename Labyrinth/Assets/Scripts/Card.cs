@@ -115,6 +115,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void LockCard()
     {
+        Awake();
         text.alpha = 1;
         text.color = Color.white;
         image.DOFade(0.6f, 1f);

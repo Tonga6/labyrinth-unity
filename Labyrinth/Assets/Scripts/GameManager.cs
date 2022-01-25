@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
     public Image[] temps;
     public static GameManager gm;
 
+    List<GameObject> tempCards;
+    List<CardHolder> tempHolders;
     private void Awake()
     {
         if (gm != null)
@@ -35,34 +39,42 @@ public class GameManager : MonoBehaviour
             gameOver.SetActive(false);
             cardHolders = new List<CardHolder>(grid.GetComponentsInChildren<CardHolder>());
 
-            List<CardHolder> tempHolders = new List<CardHolder>(cardHolders);
-            GameObject[] temp = GameObject.FindGameObjectsWithTag("Card");
+            tempHolders = new List<CardHolder>(cardHolders);
+            tempCards = GameObject.FindGameObjectsWithTag("Card").ToList();
 
-            cards.Add(temp[0].GetComponent<Card>());
-            cards[0].cardHolder = tempHolders[0];
-            cards[0].transform.SetParent(tempHolders[0].transform);
-            cards[0].transform.localPosition = new Vector3(0, 0, 0);
-            cards[0].correctID = cardData.ids[0];
-            cards[0].cardText = cardData.cardText[0];
-            cards[0].DisplayData();
-            tempHolders.RemoveAt(0);
-
-            for (int i = 1; i < temp.Length; i++)
+            SetupBoard();
+            
+        }
+        
+    }
+    void SetupBoard()
+    {
+        for (int i = 0; i < 24; i++)
+        {
+            if (i % 8 == 0)
             {
-                cards.Add(temp[i].GetComponent<Card>());
-                int rand = Random.Range(0, 24 - i);
-                cards[i].cardHolder = tempHolders[rand];
-                cards[i].transform.SetParent(tempHolders[rand].transform);
-                cards[i].transform.localPosition = new Vector3(0, 0, 0);
-                cards[i].correctID = cardData.ids[i];
-                cards[i].cardText = cardData.cardText[i];
-                cards[i].DisplayData();
-                tempHolders.RemoveAt(rand);
+                AssignCardToHolder(i, 0);
+                cards[cards.Count - 1].LockCard();
+            }
+            else
+            {
+                int rand = Random.Range(0, 8 - i % 8);
+                AssignCardToHolder(i, rand);
             }
         }
-        cards[0].LockCard();
     }
-
+    void AssignCardToHolder(int cardIndex, int holderIndex)
+    {
+        Card temp = tempCards[cardIndex].GetComponent<Card>();
+        cards.Add(temp);
+        temp.cardHolder = tempHolders[holderIndex];
+        temp.transform.SetParent(tempHolders[holderIndex].transform);
+        temp.transform.localPosition = new Vector3(0, 0, 0);
+        temp.correctID = cardData.ids[cardIndex];
+        temp.cardText = cardData.cardText[cardIndex];
+        temp.DisplayData();
+        tempHolders.RemoveAt(holderIndex);
+    }
 
     public void CheckGameState()
     {
